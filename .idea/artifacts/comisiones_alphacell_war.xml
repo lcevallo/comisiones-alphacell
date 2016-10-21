@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="comisiones-alphacell:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Academico.war">
+      <element id="artifact" artifact-name="comisiones-alphacell:war exploded" />
+    </root>
+  </artifact>
+</component>
