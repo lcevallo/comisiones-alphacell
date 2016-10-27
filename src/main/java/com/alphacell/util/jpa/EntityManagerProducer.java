@@ -19,7 +19,7 @@ public class EntityManagerProducer {
 	private EntityManagerFactory factory;
 	
 	public EntityManagerProducer() {
-		this.factory = Persistence.createEntityManagerFactory("academicoPU");
+		this.factory = Persistence.createEntityManagerFactory("comisionesPU");
 	}
 	
 	@Produces

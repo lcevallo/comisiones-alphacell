@@ -92,6 +92,15 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.1</version>
         </dependency>
+
+
+        <!-- Usado para geração de arquivos Excel -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.11</version>
+            <scope>compile</scope>
+        </dependency>
         
           <!-- OmniFaces (utilitarios para JSF) -->
         <dependency>
@@ -100,8 +109,20 @@
             <version>2.0</version>
             <scope>compile</scope>
         </dependency>
-        
-    
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.7</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+
     </dependencies>
     
       <build>

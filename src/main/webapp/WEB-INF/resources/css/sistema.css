@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+* {
+    font-family: Arial !important;
+    font-size: 13px;
+}
+/*
+** Regla CSS que ayuda a obtener una mejor apariencia de las tablas contenidas en otros componentes.
+*/
+.ui-panel .ui-panel-content {
+    padding: 5px 0px !important;
+}
+/*
+** Centrar texto en tablas.
+*/
+.ui-datatable tbody td {
+    text-align: center !important;
+}
+
+
+/*
+**Esto es para la opcion de edicion de las tablas
+*/
+.ui-editable-column-options .ui-icon{
+    background-repeat: repeat;
+}
+.ui-editable-column-options .ui-icon-pencil{
+
+    background-image: url("#{facesContext.externalContext.request.contextPath}/resources/images/pencil.png");
+}
+.ui-editable-column-options .ui-icon-check{
+    background-image: url("#{facesContext.externalContext.request.contextPath}/resources/images/check.png");
+  /*  background-image: url(../images/check.png) */
+}
+.ui-editable-column-options .ui-icon-close{
+    margin-left:0.5em;
+    background-image: url("#{facesContext.externalContext.request.contextPath}/resources/images/close.png");
+}
+.ui-editable-column-options .ui-icon-remove{
+    float:left;
+    margin-left:0.5em;
+    background-image: url("#{facesContext.externalContext.request.contextPath}/resources/images/remove.png");
+}
+/*
+**FIN
+*/
