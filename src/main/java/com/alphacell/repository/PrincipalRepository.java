@@ -19,9 +19,9 @@ public class PrincipalRepository implements Serializable{
     @Inject
     private EntityManager manager;
 
-    public Principal getById(Integer id)
+    public Principal getByImei(String imei)
     {
-        Principal principal=manager.find(Principal.class,id);
+        Principal principal=manager.find(Principal.class,imei);
         return principal;
     }
 
@@ -47,7 +47,7 @@ public class PrincipalRepository implements Serializable{
 
 
     public void remover(Principal principal) {
-        principal = getById(principal.getId());
+        principal = getByImei(principal.getImei());
         manager.remove(principal);
     }
 

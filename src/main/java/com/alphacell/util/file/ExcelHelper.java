@@ -6,11 +6,9 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 
 import java.io.*;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.lang.reflect.*;
+import java.math.BigDecimal;
+import java.util.*;
 
 
 /**
@@ -55,10 +53,10 @@ public class ExcelHelper {
     }
 
 
-    private Sheet getSheetWithName(String name) {
+    private Sheet getSheetWithName(String paquete,String name) {
         Sheet sheet = null;
         for (int i = 0; i < workbook.getNumberOfSheets(); i++) {
-            if (name.compareTo(workbook.getSheetName(i)) == 0) {
+            if (name.compareTo(paquete+workbook.getSheetName(i)) == 0) {
                 sheet = workbook.getSheetAt(i);
                 break;
             }
@@ -72,16 +70,25 @@ public class ExcelHelper {
         workbook = WorkbookFactory.create(inp);
     }
 
-    @SuppressWarnings({"unchecked", "rawtypes"})
-    public <T> List<T> readData(String classname) throws Exception {
-        this.initializeForRead();
-        Sheet sheet = getSheetWithName(classname);
 
-        Class clazz = Class.forName(workbook.getSheetName(0));
+    /***
+     *
+     * @param paquete Es el nombre del paquete del que pertenece la clase
+     * @param classname Es el nombre de la clase que debe de estar en el nombre del sheet
+     * @param <T>
+     * @return
+     * @throws Exception
+     */
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public <T> List<T> readData(String paquete,String classname) throws Exception {
+        this.initializeForRead();
+        Sheet sheet = getSheetWithName(paquete,classname);
+       // sheet.getPhysicalNumberOfRows();
+        Class clazz = Class.forName(paquete+workbook.getSheetName(0));
         setupFieldsForClass(clazz);
         List<T> result = new ArrayList<T>();
         Row row;
-        for (int rowCount = 1; rowCount < 4; rowCount++) {
+        for (int rowCount = 1; rowCount < sheet.getLastRowNum()+1; rowCount++) {
             T one = (T) clazz.newInstance();
             row = sheet.getRow(rowCount);
             int colCount = 0;
@@ -106,7 +113,11 @@ public class ExcelHelper {
                         method.invoke(one, num.floatValue());
                     } else if (returnType == long.class || returnType == Long.class) {
                         method.invoke(one, num.longValue());
-                    } else if (returnType == Date.class) {
+                    } else if (returnType == short.class || returnType == Short.class) {
+                        method.invoke(one, num.shortValue());
+                    } else if (returnType == BigDecimal.class) {
+                        method.invoke(one, BigDecimal.valueOf(num));
+                    }else if (returnType == Date.class) {
 
                         Date date = HSSFDateUtil.getJavaDate(cell.getNumericCellValue());
                         method.invoke(one, date);

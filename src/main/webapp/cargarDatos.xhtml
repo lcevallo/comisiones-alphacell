@@ -9,13 +9,78 @@
     <ui:define name="titulo">Carga de datos</ui:define>
     <ui:define name="cuerpo">
 
-        <h:form enctype="multipart/form-data">
-
-		Excel File <h:inputFile value="#{uploadBean2.part}" ></h:inputFile>
-			<br></br>
-		 <p:commandButton value="Import Excel" action="#{uploadBean2.processupload}" />
-
+        <h:form id="form-principal" enctype="multipart/form-data">
             <p:growl id="display" showDetail="true" />
+		    <p:outputLabel for="buttonFile" value="Archivo de Excel:" />
+            <h:inputFile id="buttonFile" value="#{uploadBean2.part}" styleClass="richButton" />
+
+		 <p:commandButton value="Importar Excel" action="#{uploadBean2.processupload}" ajax="false"  />
+
+
+            <p:dataTable
+                    id="table-principal"
+                    value="#{uploadBean2.tablePrincipal}"
+                    var="record_principal"
+                    filteredValue="#{uploadBean2.tablePrincipalFiltered}"
+                    scrollable="true"
+                    selection="#{uploadBean2.principalSelected}"
+                    selectionMode="single"
+                    style="margin-top: 20px"
+                    paginatorPosition="bottom"
+                    paginator="true"
+                    paginatorAlwaysVisible="false"
+                    rows="15"
+                    paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+                    currentPageReportTemplate="Pagina: ({currentPage} de {totalPages})"
+                    rowsPerPageTemplate="5,15,25"
+                    rowKey="#{record_principal.imei}"
+                    emptyMessage="No existen datos para presentar"
+            >
+
+            <p:column headerText="Mes" >
+                <h:outputText value="#{record_principal.mes}" >
+                    <f:convertNumber />
+                </h:outputText>
+            </p:column>
+
+              <p:column headerText="Ciudad">
+                    <h:outputText value="#{record_principal.ciudad}" >
+                    </h:outputText>
+              </p:column>
+
+                <p:column headerText="Cadena">
+                    <h:outputText value="#{record_principal.cadena}" >
+                    </h:outputText>
+                </p:column>
+
+                <p:column headerText="Pos">
+                    <h:outputText value="#{record_principal.pos}" >
+                    </h:outputText>
+                </p:column>
+
+
+                <p:column headerText="Region">
+                    <h:outputText value="#{record_principal.region}" >
+                    </h:outputText>
+                </p:column>
+
+                <p:column headerText="Marca">
+                    <h:outputText value="#{record_principal.marca}" >
+                    </h:outputText>
+                </p:column>
+
+                <p:column headerText="Modelo">
+                    <h:outputText value="#{record_principal.modelo}" >
+                    </h:outputText>
+                </p:column>
+
+                <p:column headerText="Imei">
+                    <h:outputText value="#{record_principal.imei}" >
+                    </h:outputText>
+                </p:column>
+
+            </p:dataTable>
+
 
         </h:form>
 

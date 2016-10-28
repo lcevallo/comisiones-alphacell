@@ -41,6 +41,68 @@
     margin-left:0.5em;
     background-image: url("#{facesContext.externalContext.request.contextPath}/resources/images/remove.png");
 }
+
+/**
+Para los botones h
+*/
+.richButton {
+    margin:0 5px 0 0;
+    padding:5px 10px 5px 10px;
+    height:29px;
+    font-size:12px;
+    color:#262626;
+    font-weight:bold;
+    border:1px #ccc solid;
+    border-radius:5px;
+    cursor:pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    /* IE10 Consumer Preview */
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* Mozilla Firefox */
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* Opera */
+    background: -o-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #E3E3E3));
+    /* Webkit (Chrome 11+) */
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background: linear-gradient(to bottom, #FFFFFF 0%, #E3E3E3 100%);
+}
+.richButton:hover:enabled {
+    /* IE10 Consumer Preview */
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* Mozilla Firefox */
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* Opera */
+    background: -o-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #CCCCCC));
+    /* Webkit (Chrome 11+) */
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background: linear-gradient(to bottom, #FFFFFF 0%, #CCCCCC 100%);
+}
+.richButton:active:enabled {
+    /* IE10 Consumer Preview */
+    background: -ms-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* Mozilla Firefox */
+    background: -moz-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* Opera */
+    background: -o-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F0F0F0), color-stop(1, #CCCCCC));
+    /* Webkit (Chrome 11+) */
+    background: -webkit-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background: linear-gradient(to bottom, #F0F0F0 0%, #CCCCCC 100%);
+}
+.richButton:disabled {
+    font-weight: normal;
+    color: #888888;
+}
+
 /*
 **FIN
 */
+

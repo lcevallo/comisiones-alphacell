@@ -5,8 +5,15 @@
  */
 package com.alphacell.model;
 
+
 import java.io.Serializable;
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -20,7 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Principal.findAll", query = "SELECT p FROM Principal p"),
-    @NamedQuery(name = "Principal.findById", query = "SELECT p FROM Principal p WHERE p.id = :id"),
+    @NamedQuery(name = "Principal.findByImei", query = "SELECT p FROM Principal p WHERE p.imei = :imei"),
     @NamedQuery(name = "Principal.findByMes", query = "SELECT p FROM Principal p WHERE p.mes = :mes"),
     @NamedQuery(name = "Principal.findByCiudad", query = "SELECT p FROM Principal p WHERE p.ciudad = :ciudad"),
     @NamedQuery(name = "Principal.findByCadena", query = "SELECT p FROM Principal p WHERE p.cadena = :cadena"),
@@ -28,17 +35,17 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Principal.findByRegion", query = "SELECT p FROM Principal p WHERE p.region = :region"),
     @NamedQuery(name = "Principal.findByMarca", query = "SELECT p FROM Principal p WHERE p.marca = :marca"),
     @NamedQuery(name = "Principal.findByModelo", query = "SELECT p FROM Principal p WHERE p.modelo = :modelo"),
-    @NamedQuery(name = "Principal.findByImei", query = "SELECT p FROM Principal p WHERE p.imei = :imei"),
     @NamedQuery(name = "Principal.findByModeloAlph", query = "SELECT p FROM Principal p WHERE p.modeloAlph = :modeloAlph"),
     @NamedQuery(name = "Principal.findByImeiAlph", query = "SELECT p FROM Principal p WHERE p.imeiAlph = :imeiAlph")})
 public class Principal implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue
     @Basic(optional = false)
-    @Column(name = "id")
-    private Integer id;
+    @NotNull
+    @Size(min = 1, max = 70)
+    @Column(name = "imei")
+    private String imei;
     @Basic(optional = false)
     @NotNull
     @Column(name = "mes")
@@ -61,34 +68,46 @@ public class Principal implements Serializable {
     @Size(max = 30)
     @Column(name = "modelo")
     private String modelo;
-    @Size(max = 70)
-    @Column(name = "imei")
-    private String imei;
+    
     @Size(max = 30)
-    @Column(name = "modelo_alph")
+    @Column(name = "modelo_alph",nullable = true)
     private String modeloAlph;
+  
     @Size(max = 70)
-    @Column(name = "imei_alph")
+    @Column(name = "imei_alph",nullable = true)
     private String imeiAlph;
 
     public Principal() {
     }
 
-    public Principal(Integer id) {
-        this.id = id;
+    public Principal(String imei) {
+        this.imei = imei;
     }
 
-    public Principal(Integer id, short mes) {
-        this.id = id;
+    public Principal(String imei, short mes) {
+        this.imei = imei;
         this.mes = mes;
     }
 
-    public Integer getId() {
-        return id;
+    public Principal(PrincipalXLS principalXLS) {
+        this.imei = principalXLS.getImei();
+        this.mes = principalXLS.getMes();
+        this.ciudad = principalXLS.getCiudad();
+        this.cadena = principalXLS.getCadena();
+        this.pos = principalXLS.getPos();
+        this.region = principalXLS.getRegion();
+        this.marca = principalXLS.getMarca();
+        this.modelo = principalXLS.getModelo();
+
+
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public String getImei() {
+        return imei;
+    }
+
+    public void setImei(String imei) {
+        this.imei = imei;
     }
 
     public short getMes() {
@@ -147,14 +166,6 @@ public class Principal implements Serializable {
         this.modelo = modelo;
     }
 
-    public String getImei() {
-        return imei;
-    }
-
-    public void setImei(String imei) {
-        this.imei = imei;
-    }
-
     public String getModeloAlph() {
         return modeloAlph;
     }
@@ -174,7 +185,7 @@ public class Principal implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (imei != null ? imei.hashCode() : 0);
         return hash;
     }
 
@@ -185,7 +196,7 @@ public class Principal implements Serializable {
             return false;
         }
         Principal other = (Principal) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.imei == null && other.imei != null) || (this.imei != null && !this.imei.equals(other.imei))) {
             return false;
         }
         return true;
@@ -193,7 +204,7 @@ public class Principal implements Serializable {
 
     @Override
     public String toString() {
-        return "com.alphacell.model.Principal[ id=" + id + " ]";
+        return "com.alphacell.model.Principal[ imei=" + imei + " ]";
     }
     
 }

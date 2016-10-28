@@ -1,12 +1,12 @@
 package com.alphacell.util.file;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Calendar;
+import org.apache.commons.io.IOUtils;
+
+import java.io.*;
+import java.util.*;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.Part;
 
@@ -41,23 +41,32 @@ public class UploadHelper {
 						Long nameRadom= Calendar.getInstance().getTimeInMillis();
 						String newfilename=nameRadom+extension;
 						fileSaveData=newfilename;
-						String fileSavePath= FacesContext.getCurrentInstance().getExternalContext().getRealPath(this.path_to);
+
+						ExternalContext ec= FacesContext.getCurrentInstance().getExternalContext();
+
+						String path= Rute.getPathDefinida(ec.getRealPath("/"));
+						String realPath=path + File.separator + "src"+ File.separator + "main" + File.separator + "webapp" + File.separator +"resources"+ File.separator+"assets" + File.separator;
+						String fileSavePath= realPath;
+
 									try {
-										byte[] fileContent= new byte[(int) fileUpload.getSize()];
+
+
 										InputStream in= fileUpload.getInputStream();
 
 
-										File fileToCreate= new File(fileSaveData,newfilename);
+										File fileToCreate= new File(fileSavePath,newfilename);
 										File folder= new File(fileSavePath);
 										if(!folder.exists())
 										{
 											folder.mkdirs();
 										}
-										FileOutputStream fileOutputStream= new FileOutputStream(fileToCreate);
-										fileOutputStream.write(fileContent);
-										fileOutputStream.flush();
-										fileOutputStream.close();
-										fileSaveData = newfilename;										
+
+
+                                        this.save(in,fileToCreate);
+                                  		fileSaveData = newfilename;
+
+
+
 									} catch (IOException e) {
 										fileSaveData="";
 									}	
@@ -80,7 +89,16 @@ public class UploadHelper {
 		
 		return fileSaveData;
 	}//fin del metodo processUpload
-	
+
+
+    public void save (InputStream inputStream, File file) throws IOException
+    {
+        OutputStream output= new FileOutputStream(file);
+
+        IOUtils.copy(inputStream,output);
+    }
+
+
 	private String getFilename(Part part)
 	{
 		for(String cd: part.getHeader("content-disposition").split(";")){
