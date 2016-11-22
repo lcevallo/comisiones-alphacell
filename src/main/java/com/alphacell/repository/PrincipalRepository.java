@@ -35,7 +35,6 @@ public class PrincipalRepository implements Serializable{
 
         listaenviada=query.getResultList();
 
-
         return listaenviada;
     }
 
