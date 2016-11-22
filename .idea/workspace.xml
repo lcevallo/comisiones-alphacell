@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e7b32b1-0115-44a2-9d8c-acb89f5f6498" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_monitorjbl_xlsx_streamer_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlphaXLS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alphacell/repository/ExcelAlphaRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/alphacell/service/RegistroExcelAlph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/log4j.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_stax_api_1_0_spec_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/assets/1477688865734.xlsx" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_13.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_13.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_13.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/comisiones_alphacell_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/comisiones_alphacell_war_exploded.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/assets/1479849652643.xlsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comisiones-alphacell.iml" afterPath="$PROJECT_DIR$/comisiones-alphacell.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java" afterPath="$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alphacell/repository/PrincipalRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/alphacell/repository/PrincipalRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/alphacell/util/file/ExcelHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/alphacell/util/file/ExcelHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/cargarDatos.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/cargarDatos.xhtml" />
     </list>
     <ignored path="comisiones-alphacell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,9 +33,43 @@
           <file leaf-file-name="PrincipalXLS.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/PrincipalXLS.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="609">
+                <state relative-caret-position="900">
                   <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-                  <folding />
+                  <folding>
+                    <element signature="e#0#1968#0" expanded="false" />
+                    <element signature="e#913#914#0" expanded="false" />
+                    <element signature="e#939#940#0" expanded="false" />
+                    <element signature="e#976#977#0" expanded="false" />
+                    <element signature="e#1006#1007#0" expanded="false" />
+                    <element signature="e#1039#1040#0" expanded="false" />
+                    <element signature="e#1068#1069#0" expanded="false" />
+                    <element signature="e#1112#1113#0" expanded="false" />
+                    <element signature="e#1148#1149#0" expanded="false" />
+                    <element signature="e#1181#1182#0" expanded="false" />
+                    <element signature="e#1210#1211#0" expanded="false" />
+                    <element signature="e#1254#1255#0" expanded="false" />
+                    <element signature="e#1290#1291#0" expanded="false" />
+                    <element signature="e#1320#1321#0" expanded="false" />
+                    <element signature="e#1346#1347#0" expanded="false" />
+                    <element signature="e#1384#1385#0" expanded="false" />
+                    <element signature="e#1414#1415#0" expanded="false" />
+                    <element signature="e#1447#1448#0" expanded="false" />
+                    <element signature="e#1476#1477#0" expanded="false" />
+                    <element signature="e#1520#1521#0" expanded="false" />
+                    <element signature="e#1556#1557#0" expanded="false" />
+                    <element signature="e#1588#1589#0" expanded="false" />
+                    <element signature="e#1616#1617#0" expanded="false" />
+                    <element signature="e#1658#1659#0" expanded="false" />
+                    <element signature="e#1692#1693#0" expanded="false" />
+                    <element signature="e#1725#1726#0" expanded="false" />
+                    <element signature="e#1754#1755#0" expanded="false" />
+                    <element signature="e#1798#1799#0" expanded="false" />
+                    <element signature="e#1834#1835#0" expanded="false" />
+                    <element signature="e#1865#1866#0" expanded="false" />
+                    <element signature="e#1892#1893#0" expanded="false" />
+                    <element signature="e#1932#1933#0" expanded="false" />
+                    <element signature="e#1964#1965#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -65,9 +77,11 @@
           <file leaf-file-name="ExcelAlpha.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlpha.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-                  <folding />
+                <state relative-caret-position="-75">
+                  <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -75,9 +89,56 @@
           <file leaf-file-name="Principal.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/Principal.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-751">
+                <state relative-caret-position="285">
                   <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-                  <folding />
+                  <folding>
+                    <element signature="e#0#5638#0" expanded="false" />
+                    <element signature="imports" expanded="false" />
+                    <element signature="e#2951#2952#0" expanded="false" />
+                    <element signature="e#2983#2984#0" expanded="false" />
+                    <element signature="e#3543#3544#0" expanded="false" />
+                    <element signature="e#3570#3571#0" expanded="false" />
+                    <element signature="e#3610#3611#0" expanded="false" />
+                    <element signature="e#3642#3643#0" expanded="false" />
+                    <element signature="e#3671#3672#0" expanded="false" />
+                    <element signature="e#3697#3698#0" expanded="false" />
+                    <element signature="e#3734#3735#0" expanded="false" />
+                    <element signature="e#3764#3765#0" expanded="false" />
+                    <element signature="e#3797#3798#0" expanded="false" />
+                    <element signature="e#3826#3827#0" expanded="false" />
+                    <element signature="e#3870#3871#0" expanded="false" />
+                    <element signature="e#3906#3907#0" expanded="false" />
+                    <element signature="e#3939#3940#0" expanded="false" />
+                    <element signature="e#3968#3969#0" expanded="false" />
+                    <element signature="e#4012#4013#0" expanded="false" />
+                    <element signature="e#4048#4049#0" expanded="false" />
+                    <element signature="e#4078#4079#0" expanded="false" />
+                    <element signature="e#4104#4105#0" expanded="false" />
+                    <element signature="e#4142#4143#0" expanded="false" />
+                    <element signature="e#4172#4173#0" expanded="false" />
+                    <element signature="e#4205#4206#0" expanded="false" />
+                    <element signature="e#4234#4235#0" expanded="false" />
+                    <element signature="e#4278#4279#0" expanded="false" />
+                    <element signature="e#4314#4315#0" expanded="false" />
+                    <element signature="e#4346#4347#0" expanded="false" />
+                    <element signature="e#4374#4375#0" expanded="false" />
+                    <element signature="e#4416#4417#0" expanded="false" />
+                    <element signature="e#4450#4451#0" expanded="false" />
+                    <element signature="e#4483#4484#0" expanded="false" />
+                    <element signature="e#4512#4513#0" expanded="false" />
+                    <element signature="e#4556#4557#0" expanded="false" />
+                    <element signature="e#4592#4593#0" expanded="false" />
+                    <element signature="e#4629#4630#0" expanded="false" />
+                    <element signature="e#4662#4663#0" expanded="false" />
+                    <element signature="e#4714#4715#0" expanded="false" />
+                    <element signature="e#4758#4759#0" expanded="false" />
+                    <element signature="e#4793#4794#0" expanded="false" />
+                    <element signature="e#4824#4825#0" expanded="false" />
+                    <element signature="e#4872#4873#0" expanded="false" />
+                    <element signature="e#4912#4913#0" expanded="false" />
+                    <element signature="e#5554#5555#0" expanded="false" />
+                    <element signature="e#5629#5630#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -85,37 +146,32 @@
           <file leaf-file-name="cargarDatos.xhtml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/cargarDatos.xhtml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
+                <state relative-caret-position="960">
                   <caret line="64" column="67" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UploadBean2.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="UploadBean2.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="366">
-                  <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+                <state relative-caret-position="336">
+                  <caret line="138" column="14" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="14" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#6283#6284#0" expanded="true" />
-                    <element signature="e#6323#6324#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ExcelHelper.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ExcelHelper.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/util/file/ExcelHelper.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="179" column="68" selection-start-line="179" selection-start-column="68" selection-end-line="179" selection-end-column="68" />
+                <state relative-caret-position="244">
+                  <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#5150#5194#0" expanded="true" />
-                    <element signature="e#12797#12798#0" expanded="true" />
-                    <element signature="e#12832#12833#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -124,7 +180,7 @@
           <file leaf-file-name="RegistroExcelAlph.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/service/RegistroExcelAlph.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="24">
+                <state relative-caret-position="45">
                   <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -142,7 +198,7 @@
           <file leaf-file-name="ExcelAlphaRepository.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/repository/ExcelAlphaRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="129">
+                <state relative-caret-position="405">
                   <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -156,7 +212,7 @@
           <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="95">
+                <state relative-caret-position="1710">
                   <caret line="114" column="43" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
                   <folding />
                 </state>
@@ -166,7 +222,7 @@
           <file leaf-file-name="RegistroPrincipal.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/service/RegistroPrincipal.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
+                <state relative-caret-position="150">
                   <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding />
                 </state>
@@ -176,38 +232,9 @@
           <file leaf-file-name="ExcelAlphaXLS.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlphaXLS.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-861">
-                  <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#802#803#0" expanded="true" />
-                    <element signature="e#840#841#0" expanded="true" />
-                    <element signature="e#900#901#0" expanded="true" />
-                    <element signature="e#954#955#0" expanded="true" />
-                    <element signature="e#990#991#0" expanded="true" />
-                    <element signature="e#1021#1022#0" expanded="true" />
-                    <element signature="e#1070#1071#0" expanded="true" />
-                    <element signature="e#1110#1111#0" expanded="true" />
-                    <element signature="e#1144#1145#0" expanded="true" />
-                    <element signature="e#1174#1175#0" expanded="true" />
-                    <element signature="e#1220#1221#0" expanded="true" />
-                    <element signature="e#1258#1259#0" expanded="true" />
-                    <element signature="e#1289#1290#0" expanded="true" />
-                    <element signature="e#1316#1317#0" expanded="true" />
-                    <element signature="e#1356#1357#0" expanded="true" />
-                    <element signature="e#1388#1389#0" expanded="true" />
-                    <element signature="e#1429#1430#0" expanded="true" />
-                    <element signature="e#1466#1467#0" expanded="true" />
-                    <element signature="e#1526#1527#0" expanded="true" />
-                    <element signature="e#1578#1579#0" expanded="true" />
-                    <element signature="e#1611#1612#0" expanded="true" />
-                    <element signature="e#1640#1641#0" expanded="true" />
-                    <element signature="e#1684#1685#0" expanded="true" />
-                    <element signature="e#1720#1721#0" expanded="true" />
-                    <element signature="e#1752#1753#0" expanded="true" />
-                    <element signature="e#1780#1781#0" expanded="true" />
-                    <element signature="e#1822#1823#0" expanded="true" />
-                    <element signature="e#1856#1857#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="225">
+                  <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -261,10 +288,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/alphacell/repository/ExcelAlphaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlphaXLS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlpha.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/alphacell/util/file/ExcelHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java" />
       </list>
     </option>
   </component>
@@ -326,8 +353,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -476,7 +503,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1017,15 +1044,16 @@
       <workItem from="1477688774848" duration="2178000" />
       <workItem from="1479739392077" duration="11601000" />
       <workItem from="1479832468183" duration="15762000" />
+      <workItem from="1479850543921" duration="3901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77644000" />
+    <option name="totallyTimeSpent" value="81545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1602" height="875" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1090,20 +1118,8 @@
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/alphacell/util/file/ExcelHelper.java</url>
-          <line>171</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="49" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1124,7 +1140,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1134,8 +1152,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6283#6284#0" expanded="true" />
-            <element signature="e#6323#6324#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1174,7 +1190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,8 +1216,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6283#6284#0" expanded="true" />
-            <element signature="e#6323#6324#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1219,7 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1250,7 +1262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,7 +1292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,7 +1339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,7 +1425,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/service/RegistroPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="150">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -1424,31 +1433,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/PrincipalXLS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
+        <state relative-caret-position="900">
           <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#1968#0" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
+            <element signature="e#1039#1040#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1112#1113#0" expanded="false" />
+            <element signature="e#1148#1149#0" expanded="false" />
+            <element signature="e#1181#1182#0" expanded="false" />
+            <element signature="e#1210#1211#0" expanded="false" />
+            <element signature="e#1254#1255#0" expanded="false" />
+            <element signature="e#1290#1291#0" expanded="false" />
+            <element signature="e#1320#1321#0" expanded="false" />
+            <element signature="e#1346#1347#0" expanded="false" />
+            <element signature="e#1384#1385#0" expanded="false" />
+            <element signature="e#1414#1415#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+            <element signature="e#1476#1477#0" expanded="false" />
+            <element signature="e#1520#1521#0" expanded="false" />
+            <element signature="e#1556#1557#0" expanded="false" />
+            <element signature="e#1588#1589#0" expanded="false" />
+            <element signature="e#1616#1617#0" expanded="false" />
+            <element signature="e#1658#1659#0" expanded="false" />
+            <element signature="e#1692#1693#0" expanded="false" />
+            <element signature="e#1725#1726#0" expanded="false" />
+            <element signature="e#1754#1755#0" expanded="false" />
+            <element signature="e#1798#1799#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="false" />
+            <element signature="e#1865#1866#0" expanded="false" />
+            <element signature="e#1892#1893#0" expanded="false" />
+            <element signature="e#1932#1933#0" expanded="false" />
+            <element signature="e#1964#1965#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-751">
+        <state relative-caret-position="285">
           <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlpha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#0#5638#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2951#2952#0" expanded="false" />
+            <element signature="e#2983#2984#0" expanded="false" />
+            <element signature="e#3543#3544#0" expanded="false" />
+            <element signature="e#3570#3571#0" expanded="false" />
+            <element signature="e#3610#3611#0" expanded="false" />
+            <element signature="e#3642#3643#0" expanded="false" />
+            <element signature="e#3671#3672#0" expanded="false" />
+            <element signature="e#3697#3698#0" expanded="false" />
+            <element signature="e#3734#3735#0" expanded="false" />
+            <element signature="e#3764#3765#0" expanded="false" />
+            <element signature="e#3797#3798#0" expanded="false" />
+            <element signature="e#3826#3827#0" expanded="false" />
+            <element signature="e#3870#3871#0" expanded="false" />
+            <element signature="e#3906#3907#0" expanded="false" />
+            <element signature="e#3939#3940#0" expanded="false" />
+            <element signature="e#3968#3969#0" expanded="false" />
+            <element signature="e#4012#4013#0" expanded="false" />
+            <element signature="e#4048#4049#0" expanded="false" />
+            <element signature="e#4078#4079#0" expanded="false" />
+            <element signature="e#4104#4105#0" expanded="false" />
+            <element signature="e#4142#4143#0" expanded="false" />
+            <element signature="e#4172#4173#0" expanded="false" />
+            <element signature="e#4205#4206#0" expanded="false" />
+            <element signature="e#4234#4235#0" expanded="false" />
+            <element signature="e#4278#4279#0" expanded="false" />
+            <element signature="e#4314#4315#0" expanded="false" />
+            <element signature="e#4346#4347#0" expanded="false" />
+            <element signature="e#4374#4375#0" expanded="false" />
+            <element signature="e#4416#4417#0" expanded="false" />
+            <element signature="e#4450#4451#0" expanded="false" />
+            <element signature="e#4483#4484#0" expanded="false" />
+            <element signature="e#4512#4513#0" expanded="false" />
+            <element signature="e#4556#4557#0" expanded="false" />
+            <element signature="e#4592#4593#0" expanded="false" />
+            <element signature="e#4629#4630#0" expanded="false" />
+            <element signature="e#4662#4663#0" expanded="false" />
+            <element signature="e#4714#4715#0" expanded="false" />
+            <element signature="e#4758#4759#0" expanded="false" />
+            <element signature="e#4793#4794#0" expanded="false" />
+            <element signature="e#4824#4825#0" expanded="false" />
+            <element signature="e#4872#4873#0" expanded="false" />
+            <element signature="e#4912#4913#0" expanded="false" />
+            <element signature="e#5554#5555#0" expanded="false" />
+            <element signature="e#5629#5630#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/service/RegistroExcelAlph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
+        <state relative-caret-position="45">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1470,7 +1552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1484,7 +1565,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/cargarDatos.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="960">
           <caret line="64" column="67" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
           <folding />
         </state>
@@ -1492,7 +1573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/repository/ExcelAlphaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="405">
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1502,72 +1583,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6283#6284#0" expanded="true" />
-            <element signature="e#6323#6324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="1710">
           <caret line="114" column="43" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlpha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/model/ExcelAlphaXLS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-861">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#990#991#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1110#1111#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-            <element signature="e#1388#1389#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1526#1527#0" expanded="true" />
-            <element signature="e#1578#1579#0" expanded="true" />
-            <element signature="e#1611#1612#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-            <element signature="e#1720#1721#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1780#1781#0" expanded="true" />
-            <element signature="e#1822#1823#0" expanded="true" />
-            <element signature="e#1856#1857#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/util/file/ExcelHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="179" column="68" selection-start-line="179" selection-start-column="68" selection-end-line="179" selection-end-column="68" />
+        <state relative-caret-position="244">
+          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5150#5194#0" expanded="true" />
-            <element signature="e#12797#12798#0" expanded="true" />
-            <element signature="e#12832#12833#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alphacell/controller/UploadBean2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="138" column="14" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -122,13 +122,21 @@ public class UploadBean2  implements Serializable{
             this.tableExcelAlphXLS = excelHelper.readData2("com.alphacell.model.", ExcelAlphaXLS.class.getName());
             this.tableExcelAlph = new ArrayList<>();
 
-            tableExcelAlphXLS.forEach(excelAlphaXLS -> {
 
+            tableExcelAlphXLS.stream().
+                    filter(excelAlphaXLS->excelAlphaXLS.getImei()!=null).
+                    forEach(excelAlphaXLS -> {
                         ExcelAlpha excelAlpha= new ExcelAlpha(excelAlphaXLS);
+                        this.registroExcelAlph.salvar(excelAlpha);
+                    });
 
+            /*
+            tableExcelAlphXLS.forEach(excelAlphaXLS -> {
+                        ExcelAlpha excelAlpha= new ExcelAlpha(excelAlphaXLS);
                         this.registroExcelAlph.salvar(excelAlpha);
                     }
             );
+            */
         }
 
         catch (Exception e) {

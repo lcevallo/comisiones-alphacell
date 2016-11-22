@@ -159,53 +159,57 @@ public class ExcelHelper {
             for(Sheet sheet:workbook) {
                 Class clazz = Class.forName(paquete + workbook.getSheetName(0));
                 setupFieldsForClass(clazz);
-
-
                 for (Row r : sheet) {
 
-                    T one = (T) clazz.newInstance();
-                    int colCount = 0;
-                    result.add(one);
+                    //Ya que la primera fila son los titulos
+                    if(r.getRowNum()>0)
+                    {
+                        T one = (T) clazz.newInstance();
+                        int colCount = 0;
+                        result.add(one);
+                        for (Cell cell : r) {
 
-                    for (Cell cell : r) {
+                            int type = cell.getCellType();
+                            String fieldName = fieldNames.get(colCount++);
+                            Method method = constructMethod(clazz, fieldName);
+                            if (type == Cell.CELL_TYPE_STRING) {
+                                String value = cell.getStringCellValue();
+                                Object[] values = new Object[1];
+                                values[0] = value;
+                                method.invoke(one, values);
+                            } else if (type == Cell.CELL_TYPE_NUMERIC) {
+                                Double num = cell.getNumericCellValue();
+                                Class<?> returnType = getGetterReturnClass(clazz, fieldName);
+                                if (returnType == int.class || returnType == Integer.class) {
+                                    method.invoke(one, num.intValue());
+                                } else if (returnType == double.class || returnType == Double.class) {
+                                    method.invoke(one, num);
+                                } else if (returnType == float.class || returnType == Float.class) {
+                                    method.invoke(one, num.floatValue());
+                                } else if (returnType == long.class || returnType == Long.class) {
+                                    method.invoke(one, num.longValue());
+                                } else if (returnType == short.class || returnType == Short.class) {
+                                    method.invoke(one, num.shortValue());
+                                } else if (returnType == BigDecimal.class) {
+                                    method.invoke(one, BigDecimal.valueOf(num));
+                                } else if (returnType == Date.class) {
 
-                        int type = cell.getCellType();
-                        String fieldName = fieldNames.get(colCount++);
-                        Method method = constructMethod(clazz, fieldName);
-                        if (type == Cell.CELL_TYPE_STRING) {
-                            String value = cell.getStringCellValue();
-                            Object[] values = new Object[1];
-                            values[0] = value;
-                            method.invoke(one, values);
-                        } else if (type == Cell.CELL_TYPE_NUMERIC) {
-                            Double num = cell.getNumericCellValue();
-                            Class<?> returnType = getGetterReturnClass(clazz, fieldName);
-                            if (returnType == int.class || returnType == Integer.class) {
-                                method.invoke(one, num.intValue());
-                            } else if (returnType == double.class || returnType == Double.class) {
-                                method.invoke(one, num);
-                            } else if (returnType == float.class || returnType == Float.class) {
-                                method.invoke(one, num.floatValue());
-                            } else if (returnType == long.class || returnType == Long.class) {
-                                method.invoke(one, num.longValue());
-                            } else if (returnType == short.class || returnType == Short.class) {
-                                method.invoke(one, num.shortValue());
-                            } else if (returnType == BigDecimal.class) {
-                                method.invoke(one, BigDecimal.valueOf(num));
-                            } else if (returnType == Date.class) {
+                                    Date date = HSSFDateUtil.getJavaDate(cell.getNumericCellValue());
+                                    method.invoke(one, date);
+                                }
 
-                                Date date = HSSFDateUtil.getJavaDate(cell.getNumericCellValue());
-                                method.invoke(one, date);
+                            } else if (type == Cell.CELL_TYPE_BOOLEAN) {
+                                boolean num = cell.getBooleanCellValue();
+                                Object[] values = new Object[1];
+                                values[0] = num;
+                                method.invoke(one, values);
                             }
 
-                        } else if (type == Cell.CELL_TYPE_BOOLEAN) {
-                            boolean num = cell.getBooleanCellValue();
-                            Object[] values = new Object[1];
-                            values[0] = num;
-                            method.invoke(one, values);
-                        }
+                        } //fin del for Cell
 
-                    } //fin del for Cell
+
+                    }// fin del if
+
                 }// fin del for ROw
 
 
