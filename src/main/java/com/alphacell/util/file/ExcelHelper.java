@@ -161,11 +161,11 @@ public class ExcelHelper {
                 setupFieldsForClass(clazz);
                 for (Row r : sheet) {
 
+                    int colCount = 0;
                     //Ya que la primera fila son los titulos
                     if(r.getRowNum()>0)
                     {
                         T one = (T) clazz.newInstance();
-                        int colCount = 0;
                         result.add(one);
                         for (Cell cell : r) {
 

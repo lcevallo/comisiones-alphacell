@@ -78,18 +78,17 @@ public class UploadBean2  implements Serializable{
             ExcelHelper excelHelper= new ExcelHelper(basePath);
 
             this.tablePrincipalXLS= excelHelper.readData("com.alphacell.model.",PrincipalXLS.class.getName());
-            this.tablePrincipal= new ArrayList<>();
+
 
             tablePrincipalXLS.forEach(principalXLS -> {
                         Principal pInsert= new Principal(principalXLS);
                         this.registroPrincipal.salvar(pInsert);
-                        this.tablePrincipal.add(new Principal(principalXLS));
+
                     }
             );
 
 
-     RequestContext.getCurrentInstance().update(
-                    Arrays.asList("form-principal:table-principal"));
+
 
 
         } catch (Exception e) {
@@ -123,11 +122,13 @@ public class UploadBean2  implements Serializable{
             this.tableExcelAlph = new ArrayList<>();
 
 
+
+
             tableExcelAlphXLS.stream().
                     filter(excelAlphaXLS->excelAlphaXLS.getImei()!=null).
                     forEach(excelAlphaXLS -> {
                         ExcelAlpha excelAlpha= new ExcelAlpha(excelAlphaXLS);
-                        this.registroExcelAlph.salvar(excelAlpha);
+                        this.registroExcelAlph.salvarSP(excelAlpha);
                     });
 
             /*
@@ -137,6 +138,11 @@ public class UploadBean2  implements Serializable{
                     }
             );
             */
+
+            this.llenarTablaPrincipal();
+
+            RequestContext.getCurrentInstance().update(
+                    Arrays.asList("form-principal:table-principal"));
         }
 
         catch (Exception e) {
@@ -147,6 +153,13 @@ public class UploadBean2  implements Serializable{
         }
     }
 
+    public void llenarTablaPrincipal()
+    {
+        this.tablePrincipal= null;
+        this.tablePrincipal= new ArrayList<>();
+        this.tablePrincipal= this.principalRepository.getAllNoEliminados();
+
+    }
 
 
 

@@ -22,6 +22,12 @@ public class RegistroExcelAlph implements Serializable {
         excelAlphaRepository.guardar(excelAlpha);
     }
 
+
+    @Transacional
+    public void salvarSP(ExcelAlpha excelAlpha) {
+        excelAlphaRepository.guardarSP(excelAlpha);
+    }
+
     @Transacional
     public void excluir(ExcelAlpha excelAlpha) {
         excelAlphaRepository.remover(excelAlpha);

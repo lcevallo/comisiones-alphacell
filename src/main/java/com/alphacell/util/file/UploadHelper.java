@@ -16,7 +16,7 @@ public class UploadHelper {
 	public UploadHelper() {
 		
 	}
-	private final int limit_max_size = 10240000;
+	private final int limit_max_size = 15728640;  //15 Megas
 	private final String limit_type_file="xls|xlsx";
 	private final String path_to="resources/assets/";
 	

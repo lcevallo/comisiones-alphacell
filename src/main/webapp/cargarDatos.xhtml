@@ -13,15 +13,18 @@
             <p:growl id="display" showDetail="true" />
 
             <h:panelGrid columns="3" cellpadding="5">
+
+
              <p:outputLabel for="buttonFile" value="Archivo de Excel:" />
              <h:inputFile id="buttonFile" value="#{uploadBean2.part}" styleClass="richButton" />
-
 		     <p:commandButton value="Importar Excel" action="#{uploadBean2.processuploadCliente}" ajax="false"  />
 
-            <p:outputLabel for="buttonFileExcel" value="Archivo de Excel de Alph:" />
-            <h:inputFile id="buttonFileExcel" value="#{uploadBean2.partExcel}" styleClass="richButton" />
 
-            <p:commandButton value="Importar Excel Alph" action="#{uploadBean2.processuploadAlph}" ajax="false"  />
+                <p:outputLabel for="buttonFileExcel" value="Archivo de Excel de Alph:" />
+                <h:inputFile id="buttonFileExcel" value="#{uploadBean2.partExcel}" styleClass="richButton" />
+                <p:commandButton value="Importar Excel Alph" action="#{uploadBean2.processuploadAlph}" ajax="false"  />
+
+
 
             </h:panelGrid>
 
