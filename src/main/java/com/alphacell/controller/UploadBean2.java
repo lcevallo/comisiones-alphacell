@@ -11,6 +11,7 @@ import com.alphacell.service.RegistroPrincipal;
 import com.alphacell.util.file.ExcelHelper;
 import com.alphacell.util.file.Rute;
 import com.alphacell.util.file.UploadHelper;
+import com.alphacell.util.jsf.FacesMessages;
 import org.primefaces.context.RequestContext;
 
 import javax.faces.context.ExternalContext;
@@ -63,6 +64,9 @@ public class UploadBean2  implements Serializable{
     private RegistroExcelAlph registroExcelAlph;
 
 
+    @Inject
+    private FacesMessages messages;
+
     public void processuploadCliente(){
         try {
             UploadHelper uh= new UploadHelper();
@@ -87,8 +91,9 @@ public class UploadBean2  implements Serializable{
                     }
             );
 
+            messages.info("Ahora debe de cargar el excel que le pasa Isabel");
 
-
+            RequestContext.getCurrentInstance().update("form-principal:display");
 
 
         } catch (Exception e) {
@@ -128,8 +133,11 @@ public class UploadBean2  implements Serializable{
                     filter(excelAlphaXLS->excelAlphaXLS.getImei()!=null).
                     forEach(excelAlphaXLS -> {
                         ExcelAlpha excelAlpha= new ExcelAlpha(excelAlphaXLS);
-                        this.registroExcelAlph.salvarSP(excelAlpha);
+                        this.registroExcelAlph.salvar(excelAlpha);
                     });
+
+            String mensaje= this.actualizarPrincipal();
+
 
             /*
             tableExcelAlphXLS.forEach(excelAlphaXLS -> {
@@ -141,8 +149,12 @@ public class UploadBean2  implements Serializable{
 
             this.llenarTablaPrincipal();
 
+            messages.info(mensaje);
+
             RequestContext.getCurrentInstance().update(
-                    Arrays.asList("form-principal:table-principal"));
+                    Arrays.asList("form-principal:display","form-principal:table-principal"));
+
+
         }
 
         catch (Exception e) {
@@ -151,6 +163,15 @@ public class UploadBean2  implements Serializable{
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
+    }
+
+
+
+    public String  actualizarPrincipal()
+    {
+        return this.registroPrincipal.actualizarSP();
+
+
     }
 
     public void llenarTablaPrincipal()

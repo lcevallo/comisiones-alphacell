@@ -60,6 +60,9 @@ public class ExcelAlphaRepository implements Serializable
             query.registerStoredProcedureParameter(6, String.class, ParameterMode.IN);
             query.registerStoredProcedureParameter(7, String.class, ParameterMode.IN);
 
+            ( (StoredProcedureQueryParameterRegistration) query.getParameter(2)).enablePassingNulls( true );
+            ( (StoredProcedureQueryParameterRegistration) query.getParameter(3)).enablePassingNulls( true );
+            ( (StoredProcedureQueryParameterRegistration) query.getParameter(4)).enablePassingNulls( true );
             ( (StoredProcedureQueryParameterRegistration) query.getParameter(5)).enablePassingNulls( true );
             ( (StoredProcedureQueryParameterRegistration) query.getParameter(6)).enablePassingNulls( true );
             ( (StoredProcedureQueryParameterRegistration) query.getParameter(7)).enablePassingNulls( true );

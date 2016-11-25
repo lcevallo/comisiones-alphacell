@@ -28,4 +28,9 @@ public class RegistroPrincipal  implements Serializable{
         principalRepository.remover(principal);
     }
 
+    @Transacional
+    public String actualizarSP() {
+      return  principalRepository.actualizarTablaPrincipalSP();
+    }
+
 }

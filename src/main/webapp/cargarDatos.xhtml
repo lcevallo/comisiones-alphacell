@@ -10,7 +10,10 @@
     <ui:define name="cuerpo">
 
         <h:form id="form-principal" enctype="multipart/form-data">
-            <p:growl id="display" showDetail="true" />
+
+
+            <p:messages id="display" />
+
 
             <h:panelGrid columns="3" cellpadding="5">
 
@@ -87,6 +90,17 @@
 
                 <p:column headerText="Imei">
                     <h:outputText value="#{record_principal.imei}" >
+                    </h:outputText>
+                </p:column>
+
+                <p:column headerText="ImeiAlph">
+                    <h:outputText value="#{record_principal.imeiAlph}" >
+                    </h:outputText>
+                </p:column>
+
+
+                <p:column headerText="ModeloAlph">
+                    <h:outputText value="#{record_principal.modeloAlph}" >
                     </h:outputText>
                 </p:column>
 

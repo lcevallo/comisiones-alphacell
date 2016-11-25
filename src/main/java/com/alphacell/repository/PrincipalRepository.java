@@ -1,10 +1,12 @@
 package com.alphacell.repository;
 
 import com.alphacell.model.Principal;
+import org.hibernate.exception.GenericJDBCException;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.StoredProcedureQuery;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,28 @@ public class PrincipalRepository implements Serializable{
         return manager.merge(principal);
     }
 
+
+    public String actualizarTablaPrincipalSP() {
+
+        String salida = "";
+        try {
+
+
+            StoredProcedureQuery query = this.manager.createStoredProcedureQuery("actualizar_principal");
+
+            if (query.execute()) {
+                salida = query.getSingleResult().toString();
+                System.out.println(salida);
+            }
+
+        } catch (GenericJDBCException | SecurityException | IllegalStateException e) {
+
+
+            e.printStackTrace();
+        }
+
+        return salida;
+    }
 
     public void remover(Principal principal) {
         principal = getByImei(principal.getImei());
