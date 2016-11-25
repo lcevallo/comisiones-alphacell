@@ -54,8 +54,7 @@
         <filter-name>PrimeFaces FileUpload Filter</filter-name>
         <servlet-name>Faces Servlet</servlet-name>
     </filter-mapping>
-    
-    
+
     <mime-mapping>
       <extension>ttf</extension>
       <mime-type>application/x-font-ttf</mime-type>

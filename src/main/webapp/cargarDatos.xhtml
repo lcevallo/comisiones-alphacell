@@ -39,6 +39,18 @@
                 <p:commandButton value="Actualizar tabla" actionListener="#{uploadBean2.llenarTablaPrincipal}" update="@form" ajax="true" />
             </p:toolbarGroup>
 
+
+                <p:toolbarGroup align="left">
+
+                    <p:commandButton value="Exportar" icon="fa-file-excel-o" type="button" ajax="false">
+                        <p:dataExporter type="xls" target="table-principal" fileName="cxcVencidosyXVencer"
+                                        postProcessor="#{uploadBean2.postProcessXLS}"
+                        />
+
+                    </p:commandButton>
+
+                </p:toolbarGroup>
+
             </p:toolbar>
 
 

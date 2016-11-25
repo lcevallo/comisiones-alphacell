@@ -12,6 +12,7 @@ import com.alphacell.util.file.ExcelHelper;
 import com.alphacell.util.file.Rute;
 import com.alphacell.util.file.UploadHelper;
 import com.alphacell.util.jsf.FacesMessages;
+import com.alphacell.util.reporte.FormatoExcelPoi;
 import org.primefaces.context.RequestContext;
 
 import javax.faces.context.ExternalContext;
@@ -24,6 +25,7 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -184,6 +186,32 @@ public class UploadBean2  implements Serializable{
         this.tablePrincipal= this.principalRepository.getAllNoEliminados();
 
         messages.info(mensaje);
+
+    }
+
+
+    public void postProcessXLS(Object document) {
+
+        HashSet omitirColumnas = new HashSet();
+        //add elements to HashSet object
+        omitirColumnas.add(new Integer("0"));
+        omitirColumnas.add(new Integer("1"));
+        omitirColumnas.add(new Integer("2"));
+        omitirColumnas.add(new Integer("4"));
+        omitirColumnas.add(new Integer("5"));
+        omitirColumnas.add(new Integer("6"));
+        omitirColumnas.add(new Integer("8"));
+        omitirColumnas.add(new Integer("9"));
+        omitirColumnas.add(new Integer("11"));
+        omitirColumnas.add(new Integer("12"));
+        omitirColumnas.add(new Integer("14"));
+        omitirColumnas.add(new Integer("15"));
+        omitirColumnas.add(new Integer("17"));
+        omitirColumnas.add(new Integer("18"));
+        omitirColumnas.add(new Integer("20"));
+        omitirColumnas.add(new Integer("21"));
+
+        FormatoExcelPoi.formatearArchivoExcel(document,omitirColumnas);
 
     }
 
