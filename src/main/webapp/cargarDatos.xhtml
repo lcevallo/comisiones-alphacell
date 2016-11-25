@@ -23,6 +23,7 @@
 		     <p:commandButton value="Importar Excel" action="#{uploadBean2.processuploadCliente}" ajax="false"  />
 
 
+
                 <p:outputLabel for="buttonFileExcel" value="Archivo de Excel de Alph:" />
                 <h:inputFile id="buttonFileExcel" value="#{uploadBean2.partExcel}" styleClass="richButton" />
                 <p:commandButton value="Importar Excel Alph" action="#{uploadBean2.processuploadAlph}" ajax="false"  />
@@ -30,6 +31,17 @@
 
 
             </h:panelGrid>
+        </h:form>
+        <h:form id="frm-datatable">
+
+            <p:toolbar style="margin-top: 20px">
+            <p:toolbarGroup>
+                <p:commandButton value="Actualizar tabla" actionListener="#{uploadBean2.llenarTablaPrincipal}" update="@form" ajax="true" />
+            </p:toolbarGroup>
+
+            </p:toolbar>
+
+
 
             <p:dataTable
                     id="table-principal"
@@ -107,8 +119,8 @@
             </p:dataTable>
 
 
-        </h:form>
 
+        </h:form>
 
     </ui:define>
 </ui:composition>

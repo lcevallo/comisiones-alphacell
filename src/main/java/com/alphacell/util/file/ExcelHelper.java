@@ -94,15 +94,29 @@ public class ExcelHelper {
         setupFieldsForClass(clazz);
         List<T> result = new ArrayList<T>();
         Row row;
-        for (int rowCount = 1; rowCount < sheet.getLastRowNum()+1; rowCount++) {
+        Field[] attributes =  clazz.getDeclaredFields();
+
+        for (int rowCount = 1; rowCount < sheet.getLastRowNum()+1; rowCount++)  {
             T one = (T) clazz.newInstance();
             row = sheet.getRow(rowCount);
             int colCount = 0;
             result.add(one);
             for (Cell cell : row) {
                 int type = cell.getCellType();
+
+                if(cell.getColumnIndex()>=attributes.length)
+                   continue;
+
+
+
                 String fieldName = fieldNames.get(colCount++);
                 Method method = constructMethod(clazz, fieldName);
+
+                if(rowCount==64 && fieldName.equals("imei"))
+                {
+                    System.out.println("Estoy en la 64");
+                }
+
                 if (type == Cell.CELL_TYPE_STRING) {
                     String value = cell.getStringCellValue();
                     Object[] values = new Object[1];

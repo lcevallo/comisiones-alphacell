@@ -5,6 +5,8 @@
  */
 package com.alphacell.model;
 
+import javax.validation.constraints.NotNull;
+
 /**
  *
  * @author luis

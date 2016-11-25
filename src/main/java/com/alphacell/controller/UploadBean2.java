@@ -136,7 +136,7 @@ public class UploadBean2  implements Serializable{
                         this.registroExcelAlph.salvar(excelAlpha);
                     });
 
-            String mensaje= this.actualizarPrincipal();
+
 
 
             /*
@@ -149,7 +149,7 @@ public class UploadBean2  implements Serializable{
 
             this.llenarTablaPrincipal();
 
-            messages.info(mensaje);
+
 
             RequestContext.getCurrentInstance().update(
                     Arrays.asList("form-principal:display","form-principal:table-principal"));
@@ -176,9 +176,14 @@ public class UploadBean2  implements Serializable{
 
     public void llenarTablaPrincipal()
     {
+
+        String mensaje= this.actualizarPrincipal();
+
         this.tablePrincipal= null;
         this.tablePrincipal= new ArrayList<>();
         this.tablePrincipal= this.principalRepository.getAllNoEliminados();
+
+        messages.info(mensaje);
 
     }
 
